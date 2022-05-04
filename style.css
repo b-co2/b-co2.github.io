@@ -1,0 +1,25 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* pantalla */
+
+body {
+    background-color: #ddd;
+}
+
+.app{
+    background-color: #fff;
+    margin: auto;
+    width: 40%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+@media screen and (max-width: 850px) {
+    .app{
+        width: 100%;
+    }
+}

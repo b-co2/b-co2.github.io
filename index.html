@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./sec1.css">
+    <link rel="stylesheet" href="./off.css">
+    <link rel="stylesheet" href="./intro.css">
+    <link rel="stylesheet" href="./control.css">
+    <link rel="stylesheet" href="./sec0.css">
+    <link rel="stylesheet" href="./comentarios.css">
+    <link rel="stylesheet" href="./regalos.css">
+    <link rel="stylesheet" href="./volInicio.css">
+    <link rel="stylesheet" href="./indice.css">
+
+    <title>Mel-15</title>
+</head>
+<body>
+    <div class="app">
+
+        <input type="number" id="contN" value="0">
+
+        <audio id="sound" src="" autoplay loop preload="auto" ></audio>
+
+        <div class="intro off" id="intro">
+            <p><span class="mel">Mel-</span>15</p>
+        </div>
+
+        <div class="indice">
+            <nav>
+                <ul >
+                  <li id="cum-mus"><span>Canción de cumpleaños </span></li>
+                  <li id="vela"><span>Vela</span></li>
+                  <li id="rega"><span>Regalo</span></li>
+                </ul>
+            </nav>
+
+            <button class="x" id="x">X</button>
+        </div>
+        <button class="btnDate btnIndice" id="btnIndice">Indice</button>
+        
+        <div class="control off" id="control">
+            
+
+
+            
+            <div class="boxDate">
+                <p class="titleDate">Coloca La Fecha De Hoy</p>
+                <input id="date" class="date" type="date">
+                
+                <button class="btnDate" id="btnDate">
+                    Iniciar
+                </button>
+            </div>
+            <div class="error">
+                <p class="textError">Lo Siento Fecha No Aceptada, No hagas trampa.</p>
+            </div>
+        </div>
+        
+        <div class="comentarios off" id="coment">
+            <div class="item-com">
+                <img src="./img/r1.png" alt="img" class="img-com" id="img-com">
+                <p id="text-com" class="text-com">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Corrupti sit quasi officia a, 
+                    dignissimos inventore molestias dolore harum cupiditate natus.
+                </p>
+
+                <button class="btn-com-next" id="btn-com-next">Siguiente</button>
+                <button class="btn-com-back" id="btn-com-back">Volver</button>
+            </div>
+        </div>
+
+        <div class="sec0 off">
+            <div class="torta">
+                <div class="velas">
+                    <div class="fuego"></div>
+                </div>
+                <div class="capa1"></div>
+                <div class="capa2"></div>
+                <div class="capa3"></div>
+                <div class="crema"></div>
+                <div class="crema2"></div>
+                <div class="crema3"></div>
+                <div class="plato"></div>
+            </div>
+
+            <audio src="./Voz 001.mp3" class="audio-sec0" id="audio-sec0" preload="" controls></audio>
+            <button class="btn-sec0-continue" id="btn-sec0-continue">Continuar</button>
+
+        </div>
+
+        <div class="sec1 off">
+
+            <div class="protector">
+            </div>
+            <input class="prog" id="prog" type="range">
+
+            <div class="torta">
+                <div class="velas">
+                    <div class="fuego" id="fuego"></div>
+                </div>
+                <div class="capa1"></div>
+                <div class="capa2"></div>
+                <div class="capa3"></div>
+                <div class="crema"></div>
+                <div class="crema2"></div>
+                <div class="crema3"></div>
+                <div class="plato"></div>
+            </div>
+
+            <button id="btnSoplar" class="btnSoplar">Sopla</button>
+
+            <div class="win" id="win">
+                <div class="cajaWin">
+                    <p class="feli">Felicidades</p>
+                    <p class="text">Has Logrado Apagar La Vela, Ahora Pide Un Deseo. :3</p>
+
+                    <button class="btn-win-sc1" id="btnReplay">Volver a Jugar</button>
+                    <button class="btn-win-sc1" id="btnNext">Continuar</button>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="regalos ">
+            <div class="lazo"></div>
+            <div class="cinta"></div>
+            <div class="tapa"></div>
+            <div class="caja"></div>
+
+            <button class="btn-abrir" id="btn-abrir">Abrir</button>
+
+            <div class="regalo">
+                <p class="text-re">Una historia quiero contar de una niña que puede encontrar, estaba solo en la oscuridad, 
+                    pero su luz me pudo tocar, fue iluminando todo el lugar, 
+                    y mi corazón pudo conquistar y ahora a su lado solo quiero estar, aunque todo cambie al tiempo pasar,
+                    lo que siento nunca por ti cambiará, yo te prometo me voy a quedar, porque a tu lado puedo decir que 
+                    tenie sentido todo para mi.
+                    <br>
+                    Ven toma mi mano y porfa no la sueltes que te quiero llevar al reino de nunca jamás. 
+                    <br>
+                    Ante el cielo quiero decir, que ha esa niña cuidaré hasta el fin, aunque el mundo se heche contra mi,
+                    de su lado no voy a partir, porque es mi tesoro y la razón, por la que late este corazón, 
+                    y aunque mi tiempo llegué a su fin, mi alma seguirá detras de ti. <br>
+                    
+                    Ven toma mi mano y porfa no la sueltes que te quiero llevar al reino de nunca jamás.
+                    <br>
+                    Ey mi amor, debes de saber,  Te Amo tanto, y siempre Te Amaré, cuenta conmigo yo aquí estaré, toda la vida, te cuidaré, 
+                    yo Te Cuidareee...
+                </p>
+                <button class="btn-abrir off" id="btn-conti">Continuar</button>
+            </div>
+        </div>
+
+        <div class="inicio ">
+            <button class="btn-vol" id="btn-vol-ini">inicio</button>
+        </div>
+
+    </div>
+
+
+    <script src="./intro.js"></script>
+    <script src="./sec1.js"></script>
+    <script src="./control.js"></script>
+    <script src="./comentarios.js"></script>
+    <script src="./sec0.js"></script>
+    <script src="./regalos.js"></script>
+    <script src="./volInicio.js"></script>
+    <script src="./indice.js"></script>
+</body>
+</html>

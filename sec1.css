@@ -1,0 +1,345 @@
+:root{
+    --crema: linear-gradient(#ff9eef, #ff00ee);
+    --chocolate: linear-gradient(#804000,#4e3631);
+    --manjar: linear-gradient(#f0e988,#d6e45a);
+    --velas: linear-gradient(#fff, #bbb);
+    --btns: linear-gradient(#91f6fa, #54b4ae );
+    --btnRadius: 10%;
+}
+
+.sec1{
+    outline: auto;
+    width: 100%;
+    margin: auto;
+    height: 100vh; 
+    display: block;
+}
+
+.torta {
+    position: relative;
+    padding: 5px;
+}
+
+.plato{
+    position: absolute;
+    top: 290px;
+    border: 1px solid #000;
+    width: 300px;
+    height: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #ccc;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.plato::before{
+    content: "";
+    width: 250px;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    top: 10px;
+    outline: 5px solid #ddd;
+    background-color: #eee;
+}
+
+.capa3 {
+    outline: 1px solid #000;
+    z-index: 2;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background-image: var(--chocolate);
+    left: 50%;
+    transform: translate(-50%);
+    top: 250px;
+    border-radius: 10%;
+}
+
+.capa2 {
+    outline: 1px solid #000;
+    z-index: 3;
+    position: absolute;
+    width: 150px;
+    height: 80px;
+    background-image: var(--manjar);
+    left: 50%;
+    transform: translate(-50%);
+    top: 195px;
+    border-radius: 10%;
+}
+
+.capa2::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #694e2a;
+    color: #694e2a;
+    border-radius: 50%;
+    top: 5px;
+    box-shadow: 87px 52px, 78px 10px, 90px 20px, 98px 12px,
+    130px 12px, 126px 48px,
+    1px 40px, 13px 45px, 2px 63px , 30px 55px, 50px 48px, 56px 60px,
+    100px 61px, 137px 60px;
+}
+
+.capa1{
+    outline: 1px solid #000;
+    z-index: 4;
+    position: absolute;
+    width: 90px;
+    height: 70px;
+    background-image: var(--chocolate);
+    left: 50%;
+    transform: translate(-50%);
+    top: 150px;
+    border-radius: 10%;
+}
+
+.crema {
+    z-index: 2;
+    position: absolute;
+    width: 208px;
+    height: 50px;
+    background-image: var(--crema);
+    top: 247px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 15% ;
+}
+
+.crema::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    color: #ff00ee;
+    border-radius: 50%;
+    box-shadow: -.2px 45px, -.2px 40px, -.2px 50px, 6px 40px, 10px 40px,
+    50px 40px, 55px 43px,
+    100px 40px,
+    150px 42px, 150px 45px,
+    193px 39px, 193px 45px, 190px 39px ;
+}
+
+.crema2{
+    z-index: 3;
+    position: absolute;
+    width: 158px;
+    height: 50px;
+    background-image: var(--crema);
+    top: 193px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 15% ;
+}
+
+.crema2::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    color: #ff00ee;
+    border-radius: 50%;
+    box-shadow: 0px 39px, 20px 40px,
+    90px 40px, 97px 38px ;
+}
+
+.crema3{
+    z-index: 4;
+    position: absolute;
+    width: 99px;
+    height: 35px;
+    background-image: var(--crema);
+    top: 148px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 15% ;
+}
+
+.crema3::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    color: #ff00ee;
+    border-radius: 50%;
+    box-shadow: 0px 25px,
+    30px 27px,
+    84px 25px ;
+}
+/* velas */
+.velas {
+    z-index: 6;
+    width: 10px;
+    height: 30px;
+    outline: 1px solid #000;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 130px;
+    background-image: var(--velas);
+}
+
+
+.fuego {
+    left: -3px;
+    width: 15px;
+    height: 20px;
+    outline: 1px solid #000;
+    position: absolute;
+    top: -21px;
+    border-radius: 10% 100% 0 100%;
+    transform: rotate(35deg);
+    background-image: linear-gradient(#fff, #ff0, #f00);
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-name: mover;
+}
+
+@keyframes mover {
+    0%{
+        transform: scale(1);
+        transform: rotate(35deg);
+    }
+
+    50%{
+        transform: scale(.98);
+        transform: rotate(60deg);
+        left: 3px;
+
+    }
+
+    100%{
+        transform: scale(1);
+        transform: rotate(35deg);
+    }
+}
+
+@keyframes soplando {
+    0%{
+        transform: scale(.5);
+        transform: rotate(35deg);
+    }
+
+    50%{
+        height: 50px;
+        transform: scale(1);
+        transform: rotate(110deg);
+        left: 20px;
+        top: -23px;
+    }
+
+    100%{
+        transform: scale(.5);
+        transform: rotate(35deg);
+    }    
+}
+
+/* BTN soplar */
+.btnSoplar {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 450px;
+    z-index: 7;
+    border: none;
+    padding: 20px;
+    font-size: 20px;
+    background-image: var(--btns);
+    border-radius: var(--btnRadius);
+}
+
+.btnSoplar:hover {
+    background-color: #4bd4c9;
+    cursor: pointer;
+}
+
+.btnSoplar:active{
+    left: 38%;
+    transform: scale(0.9);
+}
+
+.protector {
+    position: absolute;
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0);
+    left: 50%;
+    transform: translate(-50%);
+    top: 45px;
+    width: 140px;
+    height: 50px;
+}
+
+.prog {
+    z-index: 2;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 60px;
+}
+
+/* bloque de felicitaciones */
+.sec1 {
+    position: relative;
+}
+
+.win {
+    z-index: 10;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    display: none;
+}
+
+.cajaWin {
+    z-index: 11;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 300px;
+    height: 300px;
+    outline: 1px solid #000;
+    top: 100px;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
+}
+
+.feli { 
+    font-size: 40px;
+    font-weight: 900;
+    color: #14ffc4;
+}
+
+.text {
+    font-size: 30px;
+    margin-top: 70px;
+    color: #333;
+}
+
+.btn-win-sc1 {
+    padding: 10px;
+    margin-top: 30px;
+    background-image: var(--btns);
+    border: none;
+    border-radius: var(--btnRadius);
+    font-size: 20px;
+}
+
+.btn-win-sc1:hover {
+    cursor: pointer;
+}
+
+.btn-win-sc1:active{
+    transform: scale(0.9);
+}

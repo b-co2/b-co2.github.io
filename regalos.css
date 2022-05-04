@@ -1,0 +1,243 @@
+:root {
+    --caja: linear-gradient(#444, #111);
+    --cinta: linear-gradient(#2bdfd0, #167491);
+}
+
+.regalos {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    outline: auto;
+}
+
+.tapa {
+    z-index: 2;
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    outline: 2px solid #000;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 70%;
+    background-image: var(--caja);
+    animation: tapa 2s ;
+}
+
+@keyframes tapa {
+    0%{
+        bottom: 70%;
+    }
+    50%{
+        bottom: 65%;
+    }
+    100%{
+        bottom: 70%;
+    }
+}
+
+@keyframes openc {
+    0%{
+        bottom: 70%;
+    }
+    50%{
+        bottom: 66%;
+    }
+    100%{
+        bottom: 85%;
+    }
+}
+
+.caja {
+    z-index: 1;
+    position: absolute;
+    width: 140px;
+    height: 100px;
+    outline: 2px solid #000;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 55%;
+    background-image: var(--caja);
+    animation: caja 2s ;
+}
+
+@keyframes caja {
+    0%{
+        height: 100px;
+    }
+    50%{
+        height: 80px;
+        border-radius: 10%;
+        width: 150px;
+    }
+    100%{
+        height: 100px;
+    }
+}
+
+
+.cinta {
+    z-index: 3;
+    position: absolute;
+    width: 20px;
+    height: 136px;
+    outline: 2px solid #000;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 54.7%;
+    background-image: var(--cinta);
+    animation: cinta 2s ;
+}
+
+@keyframes cinta {
+    0%{
+        height: 136px;
+    }
+    50%{
+        height: 100px;
+        width: 25px;
+    }
+    100%{
+        height: 136px;
+    }
+}
+
+@keyframes openC {
+    0%{
+        height: 136px;
+    }
+    50%{
+        height: 100px;
+        width: 25px;
+    }
+    100%{
+        height: 80px;
+    }
+}
+
+.lazo {
+    z-index: 4;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    outline: 2px solid #000;
+    left: 45%;
+    transform: translate(-50%);
+    bottom: 75.5%;
+    border-radius: 10% 100% 0 100%;
+    background-image: var(--cinta);
+    animation: lazo 2s ;
+}
+
+@keyframes lazo {
+    0%{
+        bottom: 75.5%;
+    }
+    50%{
+        bottom: 70%;
+    }
+    100%{
+        bottom: 75.5%;
+    }
+}
+
+@keyframes openL {
+    0%{
+        bottom: 75.5%;
+    }
+    50%{
+        bottom: 70%;
+    }
+    100%{
+        bottom: 90%;
+    }
+}
+
+.lazo::before{
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    z-index: 3;
+    left: 100%;
+    bottom: -6%;
+    outline: 2px solid #000;
+    border-radius: 10% 100% 0 100%;
+    transform: rotate(100deg);
+    background-image: var(--cinta);
+}
+
+.btn-abrir {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 10%;
+    border: none;
+    background-image: var(--cinta);
+    bottom: 25%;
+}
+
+.btn-abrir:hover{
+    cursor: pointer;
+}
+
+.btn-abrir:active {
+    transform: scale(.9);
+    left: 39%;
+}
+
+.tapa, .caja, .cinta, .lazo {
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+}
+
+.regalo {
+    animation: no 1s ;
+    animation-fill-mode: forwards;
+    background-color: #94EEDA;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%236fc8b5' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+@keyframes reg {
+    0%{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        width: 0%;
+        height: 0vh;
+    }
+    100%{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+.text-re {
+    position: absolute;
+    z-index: 7;
+    left: 50%;
+    transform: translate(-50%);
+    animation: no 2s ;
+    top: 15%;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    background-color: #f1f1f1;
+    font-size: 20px;
+    overflow: auto;
+    height: 100px;
+}
+
+@keyframes born {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
